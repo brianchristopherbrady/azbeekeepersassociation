@@ -1,0 +1,82 @@
+{
+  "name": "scamperly-prototype",
+  "version": "0.1.0",
+  "description": "Firebase app for making apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && babel-tape-runner tests/index.js | tap-spec",
+    "start": "babel-node ./parcel.bundler.js",
+    "build": "parcel build ./src/index.html -d ./dist --no-source-maps --no-cache"
+  },
+  "bin": {
+    "scamper": "./cli/scamper"
+  },
+  "keywords": [
+    "react",
+    "cms"
+  ],
+  "author": "Dustin M. Chaffin",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^5.0.4",
+    "history": "^4.7.2",
+    "html-react-parser": "^0.4.6",
+    "localforage": "^1.7.2",
+    "marked": "^0.4.0",
+    "most": "^1.7.3",
+    "prop-types": "^15.6.0",
+    "ramda": "^0.25.0",
+    "react": "^16.0",
+    "react-dom": "^16.0",
+    "react-redux": "^5.0.7",
+    "react-redux-form": "^1.16.9",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-most": "^0.7.0",
+    "redux-persist": "^5.10.0",
+    "reduxsauce": "^1.0.0",
+    "reselect": "^3.0.1",
+    "styled-components": "^3.1.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-lodash": "^3.3.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-ramda": "^1.6.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babel-tape-runner": "^2.0.1",
+    "chalk": "^2.4.1",
+    "color": "^3.0.0",
+    "cpx": "^1.5.0",
+    "firebase-admin": "^5.13.0",
+    "minimist": "^1.2.0",
+    "parcel-bundler": "^1.9.7",
+    "redux-logger": "^3.0.6",
+    "standard": "^11.0.0",
+    "tap-parser": "^7.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1",
+    "upath": "^1.1.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "__DEV__",
+      "__QA__",
+      "__PROD__",
+      "XMLHttpRequest",
+      "FormData",
+      "React$Element",
+      "test",
+      "jest",
+      "expect"
+    ]
+  }
+}

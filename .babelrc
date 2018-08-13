@@ -1,0 +1,41 @@
+{
+  "presets": [
+    "react",
+    "stage-0",
+    ["env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "> 5%", "not ie < 9"]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "lodash",
+    "transform-class-properties",
+    [
+      "module-resolver", {
+        "root": ["."],
+        "alias": {
+          "scamperly/admin": "./src/Admin"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "lodash",
+        "transform-class-properties",
+        [
+          "module-resolver", {
+            "root": ["."],
+            "alias": {
+              "scamperly/admin": "./src/Admin/prod"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}
